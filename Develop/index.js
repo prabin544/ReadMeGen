@@ -32,9 +32,10 @@ function promptUser() {
       message: "Usage"
     },
     {
-      type: "input",
+      type: "list",
       name: "License",
-      message: "License"
+      message: "License",
+      choices: ["BSD", "MIT", "GPL"]
     },
     {
         type: "input",
@@ -58,76 +59,22 @@ async function init() {
         const answers = await promptUser();
         console.log(answers);
         console.log(answers.Project);
-        fs.appendFileSync("README.md", ("# Project " + '\n' + answers.Project) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Description " +'\n' + answers.Description) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Contents " +'\n' + answers.Contents) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Installation " +'\n' + answers.Installation) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Usage " +'\n' + answers.Usage) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# License " +'\n' + answers.License) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Description " +'\n' + answers.Description) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Contribution " +'\n' + answers.Contribution) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Tests " +'\n' + answers.Tests) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
-        fs.appendFileSync("README.md", ("# Questions " +'\n' + answers.Questions) + '\n', function(){
-            if(err){
-                throw err
-            }else{
-                console.log("Success")
-            }
-        });
+        let badge;
+        await getBadge(answers.License);
+        function getBadge(){
+          badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        };
+        fs.appendFileSync("README.md", (`${badge}\n`))
+        fs.appendFileSync("README.md", (`# ${answers.Project}\n`))
+        fs.appendFileSync("README.md", ("# Description " +'\n' + answers.Description) + '\n')
+        fs.appendFileSync("README.md", ("# Contents " +'\n' + answers.Contents) + '\n')
+        fs.appendFileSync("README.md", ("# Installation " +'\n' + answers.Installation) + '\n')
+        fs.appendFileSync("README.md", ("# Usage " +'\n' + answers.Usage) + '\n')
+        fs.appendFileSync("README.md", ("# License " +'\n' + answers.License) + '\n')
+        fs.appendFileSync("README.md", ("# Description " +'\n' + answers.Description) + '\n')
+        fs.appendFileSync("README.md", ("# Contribution " +'\n' + answers.Contribution) + '\n')
+        fs.appendFileSync("README.md", ("# Tests " +'\n' + answers.Tests) + '\n')
+        fs.appendFileSync("README.md", ("# Questions " +'\n' + answers.Questions) + '\n')
 
     } catch(err) {
       console.log(err);

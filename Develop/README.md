@@ -1,20 +1,20 @@
-# Project 
-README Generator
+# [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# a
 # Description 
-This app will generator README file dynamically
+a
 # Contents 
-Nothing yet
+a
 # Installation 
-npm install
+a
 # Usage 
-Can be used by any developer
+a
 # License 
-None
+MIT
 # Description 
-This app will generator README file dynamically
+a
 # Contribution 
-Prabin
+a
 # Tests 
-UAT passed
+a
 # Questions 
-None
+a
