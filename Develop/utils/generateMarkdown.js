@@ -1,6 +1,7 @@
 function generateMarkdown(answers) {
   return `
 # ${answers.Project}
+
 # Table of Contents
 - [Description](#Description)
 - [Installation](#Installation)
@@ -10,21 +11,25 @@ function generateMarkdown(answers) {
 - [Tests](#Tests)
 - [Questions](#Questions)
 
-## Description:
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This application is covered under: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Description:
   ${answers.Description}
 ## Installation
   ${answers.Installation}
 ## Usage
   ${answers.Usage}
+## License
+  ${answers.License}
 ## Contribution
   ${answers.Contribution}
 ## Tests
   ${answers.Tests}
 ## Questions
-  For more question visit Github page:
-- [Github Portfolio](https://github.com/${answers.Username})
+- [Github Profile](https://github.com/${answers.Username})
+
+For more question please email me at:
+- [Email](${answers.email})
 
   `;
 }
