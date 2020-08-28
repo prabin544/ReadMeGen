@@ -10,40 +10,44 @@ function promptUser() {
     {
       type: "input",
       name: "Project",
-      message: "What is title of your Project?"
+      message: "What is title of your Project? "
     },
     {
       type: "input",
       name: "Description",
-      message: "Please Give Description of your project."
+      message: "Please Give Description of your project: "
     },
     {
       type: "input",
       name: "Installation",
-      message: "Please provide installation instruction."
+      message: "Please provide installation instruction: "
     },
     {
       type: "input",
       name: "Usage",
-      message: "What is the Usage of this application?"
+      message: "What is the Usage of this application? "
     },
     {
       type: "list",
       name: "License",
-      message: "Please choose a License.",
+      message: "Please choose a License: ",
       choices: ["BSD", "MIT", "GPL"]
     },
     {
         type: "input",
         name: "Username",
-        message: "Please provide Github Username."
+        message: "Please provide Github Username: "
     },
     {
         type: "input",
         name: "Contribution",
-        message: "Who Contributed in this application?"
+        message: "Who Contributed in this application? "
     },
-    
+    {
+      type: "input",
+      name: "email",
+      message: "Please enter your Email: "
+  },
   ]);
 }
 
