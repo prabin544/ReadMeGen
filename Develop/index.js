@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-// const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
   return inquirer.prompt([
@@ -43,6 +43,11 @@ function promptUser() {
         message: "Contributing"
     },
     {
+      type: "input",
+      name: "Github",
+      message: "What is your Github Username"
+    },
+    {
         type: "input",
         name: "Tests",
         message: "Tests"
@@ -60,9 +65,17 @@ async function init() {
         console.log(answers);
         console.log(answers.Project);
         let badge;
-        await getBadge(answers.License);
-        function getBadge(){
-          badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        let choosedLicense = answers.License;
+        await getBadge(choosedLicense);
+        function getBadge(choosedLicense){
+          if(answers.License === "MIT"){
+            badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+          }else if(answers.License === "BSD"){
+            badge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+          }else{
+            badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+          };
+          
         };
         fs.appendFileSync("README.md", (`${badge}\n`))
         fs.appendFileSync("README.md", (`# ${answers.Project}\n`))
