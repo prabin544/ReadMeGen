@@ -1,5 +1,5 @@
 
-# README Generator
+# a
 
 # Table of Contents
 - [Description](#Description)
@@ -10,24 +10,24 @@
 - [Tests](#Tests)
 - [Questions](#Questions)
 
-This application is covered under: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This application is covered under: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description:
-  This application will take user input and create README.md file dynamically.
+  a
 ## Installation
-  Clone this repo from github and Navigate to integrated terminal and run "node index.js"
+  a
 ## Usage
-  To create .md file dynamically.
+  a
 ## License
-  MIT
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ## Contribution
-  prabin singh
+  a
 ## Tests
   undefined
 ## Questions
 To view my Github profile please naviagte to following link:
-- [Github Profile](https://github.com/prabin544)
+- [Github Profile](https://github.com/a)
 
-For more question please email me at: pravin544@gmail.com
+For more question please email me at: a
 
   

@@ -31,7 +31,7 @@ function promptUser() {
       type: "list",
       name: "License",
       message: "Please choose a License: ",
-      choices: ["BSD", "MIT", "GPL"]
+      choices: ["Apache 2.0", "MIT", "PERL"]
     },
     {
         type: "input",
@@ -56,6 +56,14 @@ function promptUser() {
 async function init() {
     try {
         const answers = await promptUser();
+        let badge;
+        if(answers.License === "MIT"){
+          answers.License = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        }else if (answers.License === "Apache 2.0"){
+          answers.License = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+        }else{
+          answers.License = "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]"
+        }
         const readMe = generateMarkdown(answers);
         console.log(readMe)
         await fs.writeFileSync("../README.md", readMe);

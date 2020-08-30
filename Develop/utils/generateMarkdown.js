@@ -11,7 +11,7 @@ function generateMarkdown(answers) {
 - [Tests](#Tests)
 - [Questions](#Questions)
 
-This application is covered under: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This application is covered under: ${answers.License}
 
 ## Description:
   ${answers.Description}
