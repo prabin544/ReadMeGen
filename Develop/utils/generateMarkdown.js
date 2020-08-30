@@ -26,10 +26,10 @@ This application is covered under: [![License: MIT](https://img.shields.io/badge
 ## Tests
   ${answers.Tests}
 ## Questions
+To view my Github profile please naviagte to following link:
 - [Github Profile](https://github.com/${answers.Username})
 
-For more question please email me at:
-- [Email](${answers.email})
+For more question please email me at: ${answers.email}
 
   `;
 }

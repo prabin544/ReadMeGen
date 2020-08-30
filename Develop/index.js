@@ -58,7 +58,7 @@ async function init() {
         const answers = await promptUser();
         const readMe = generateMarkdown(answers);
         console.log(readMe)
-        await fs.writeFileSync("README.md", readMe);
+        await fs.writeFileSync("../README.md", readMe);
         console.log("success");
     } catch(err) {
       console.log(err);
