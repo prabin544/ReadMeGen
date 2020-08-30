@@ -23,7 +23,7 @@ This application is covered under: [![License](https://img.shields.io/badge/Lice
 ## Contribution
   prabin singh
 ## Tests
-  undefined
+  Follow installation instruction to test this application.
 ## Questions
 To view my Github profile please naviagte to following link:
 - [Github Profile](https://github.com/prabin544)

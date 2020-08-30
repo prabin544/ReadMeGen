@@ -34,6 +34,11 @@ function promptUser() {
       choices: ["Apache 2.0", "MIT", "PERL"]
     },
     {
+      type: "input",
+      name: "Tests",
+      message: "Test Case: "
+    },
+    {
         type: "input",
         name: "Username",
         message: "Please provide Github Username: "
